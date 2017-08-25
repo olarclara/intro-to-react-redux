@@ -8,6 +8,7 @@
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.11",
     "redux": "^3.7.2",
+    "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.71.5"
   },
   "scripts": {
@@ -15,8 +16,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "semantic-ui": "^2.2.13"
   }
 }
