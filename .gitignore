@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/src/semantic
+/src/*.css
 
 # testing
 /coverage
