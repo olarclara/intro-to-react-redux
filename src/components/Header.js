@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'react-intl'
 import './Header.css'
 
 class Header extends Component {
@@ -7,7 +8,7 @@ class Header extends Component {
       <div className="Header">
         <h1>
           <span role='img' aria-label='notes'>📝️</span>
-          To Do List
+          <FormattedMessage id="header" />
         </h1>
       </div>
     )
