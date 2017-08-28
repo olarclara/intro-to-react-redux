@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import { FormattedMessage, intlShape, injectIntl } from 'react-intl'
 import { Form } from 'semantic-ui-react'
 
 export class AddTodo extends Component {
@@ -23,17 +24,29 @@ export class AddTodo extends Component {
   }
   
   render() {
+    const intl = this.props.intl
+    
+    const placeholder = intl.formatMessage({
+      id: "inputPlaceholder"
+    })
+
     return(
       <Form>
         <Form.TextArea id='todo' value={this.state.todo} onChange={this.handleChange}
-        autoHeight placeholder='Insert here your to do!' />
-        <Form.Button type='submit' onClick={this.handleAddTodo}>ADD</Form.Button>
+        autoHeight placeholder={placeholder} />
+        <Form.Button type='submit' onClick={this.handleAddTodo}>
+          <FormattedMessage id="trigger" />
+        </Form.Button>
       </Form>
     )
   }
+}
+AddTodo.propTypes = {
+  intl: intlShape.isRequired
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ 
   addTodo: addTodo
 }, dispatch)
-export default connect(null, mapDispatchToProps)(AddTodo)
+
+export default connect(null, mapDispatchToProps)(injectIntl(AddTodo))
