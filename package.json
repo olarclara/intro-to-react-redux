@@ -12,7 +12,8 @@
     "react-scripts": "1.0.11",
     "redux": "^3.7.2",
     "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.71.5"
+    "semantic-ui-react": "^0.71.5",
+    "styled-components": "^2.1.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
