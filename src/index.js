@@ -7,7 +7,7 @@ import en from 'react-intl/locale-data/en'
 import pt from 'react-intl/locale-data/pt'
 import { flattenMessages } from './utils'
 import messages from './messages'
-import App from './components/App'
+import App from './App'
 import reducer from './reducers'
 import 'semantic-ui-css/semantic.min.css'
 
