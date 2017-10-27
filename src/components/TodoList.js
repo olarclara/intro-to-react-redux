@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { List } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import './TodoList.css'
 
 class TodoList extends Component {
   render() {
     return(
-      <div className="TodoList">
+      <div>
         <List divided animated verticalAlign='middle'>
           {this.props.todos.map(todo =>
             <List.Item key={todo.id}>
