@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
 import { FormattedMessage, intlShape, injectIntl } from 'react-intl'
 import { Form } from 'semantic-ui-react'
 import styled from 'styled-components'
@@ -49,12 +46,9 @@ export class AddTodo extends Component {
     )
   }
 }
+
 AddTodo.propTypes = {
   intl: intlShape.isRequired
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  addTodo: addTodo
-}, dispatch)
-
-export default connect(null, mapDispatchToProps)(injectIntl(AddTodo))
+export default injectIntl(AddTodo)

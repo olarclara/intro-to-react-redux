@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { List } from 'semantic-ui-react'
-import { connect } from 'react-redux'
 
 class TodoList extends Component {
   render() {
@@ -21,8 +20,4 @@ class TodoList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  todos: state
-})
-
-export default connect(mapStateToProps)(TodoList)
+export default TodoList
